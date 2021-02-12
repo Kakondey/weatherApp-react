@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React,{useState} from 'react'
 import CityInput from "./components/cityInput";
-import cityWheather from "./components/cityWheather"
+import CityWeather from "./components/cityWheather"
 
 function App() {
   const [city,setCity] = useState("");
@@ -14,15 +14,19 @@ function App() {
     )
     .then((res)=>res.json())
     .then((data)=>{
+      // console.log(data.weather[0].description);
+      // console.log(data.wind.speed);
+      // console.log(data.main.humidity);
+      // console.log(data.clouds.all)
       setWeather(data);
     })
+    .catch('error')
   }
 
   return (
     <>
       <CityInput city={city} setCity={setCity} fetchCityWheather={fetchCityWheather}/>
-      {}
-      {}
+      <CityWeather weather={weather}/>  
     </>
   );
 }
