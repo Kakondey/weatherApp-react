@@ -3,29 +3,22 @@ import { Container, Table } from 'react-bootstrap'
 
 
 function CityWeather({weather}) {
-    // console.log(JSON.stringify(weather.weather[0].description))
-    // weather = JSON.stringify(weather)
-    // console.log(weather.wind.speed)
     try{
-        if(!weather){
-            return null;
-        }
+        // if(!weather){
+        //     return null;
+        // }
     
     
 
         return (
             <Container className="mt-3">
-
-                {/* <div>
-                    {JSON.stringify(weather)}
-                </div> */}
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                        <th>Weather Description</th>
-                        <th>Wind Speed</th>
-                        <th>Humidity</th>
-                        <th>Amount of clouds</th>
+                            <th>Weather Description</th>
+                            <th>Wind Speed</th>
+                            <th>Humidity</th>
+                            <th>Amount of clouds</th>
                         </tr>
                     </thead>
                     <tbody>
