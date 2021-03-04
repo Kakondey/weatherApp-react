@@ -5,10 +5,12 @@ const CityInput = ({city, setCity, fetchCityWheather}) =>{
 
     const [error,setError] = React.useState("");
     const handleInputChange = (event) => {
+        // event.preventDefault();
         setCity(event.target.value);
     };
 
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
+        e.preventDefault();
         if(!city){
             setError("City field is empty!!!");
         }else{

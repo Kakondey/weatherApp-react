@@ -13,7 +13,7 @@ function App() {
       let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3240fef444134d8679e3cac64db6e676`)
       let json = await response.json();
       let data = await json;
-      
+      console.log(data)
       setWeather(data);
     }catch(e){
       console.log(e)
